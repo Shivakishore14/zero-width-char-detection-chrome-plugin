@@ -1,0 +1,16 @@
+{
+    "name": "Zero width char detection",
+    "version": "1.0",
+    "description": "Detect zero with chars in the webpages",
+    "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": [
+            "content.js"
+          ]
+        }
+      ],
+    "manifest_version": 2
+}
