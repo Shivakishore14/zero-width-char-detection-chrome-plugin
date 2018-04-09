@@ -1,16 +1,17 @@
 {
     "name": "Zero width char detection",
     "version": "1.0",
-    "description": "Detect zero with chars in the webpages",
+    "manifest_version": 2,
+    "description": "Remove/Detect zero with chars in the webpages",
+    "permissions": ["nativeMessaging"],
     "content_scripts": [
         {
-          "matches": [
-            "<all_urls>"
-          ],
-          "js": [
-            "content.js"
-          ]
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
         }
       ],
-    "manifest_version": 2
+      "browser_action": {
+        "default_title": "ZWC",
+        "default_popup": "popup.html"
+      }
 }
